@@ -11,7 +11,7 @@
     <generator>{{ .Site.BaseURL }}</generator>
     <docs>http://cyber.harvard.edu/rss/rss.html</docs>
     <atom:link href="https://ronaldsvilcins.com/atom.xml" rel="self" type="application/atom+xml"/>
-    {{ range where .Site.RegularPages "Section" "writing" }}
+    {{ range .Pages }}
     <item>
       <title>{{ .Title }}</title>
       <link>{{ .Permalink }}</link>

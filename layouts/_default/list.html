@@ -3,7 +3,7 @@
 {{ .Content }}
 
 <ul>
-   {{ range (.Paginate ( where .Site.RegularPages "Section" "writing" ).ByDate.Reverse).Pages }}
+   {{ range (.Paginate ( .Pages ).ByDate.Reverse).Pages }}
       {{ if ne .Kind "section" }}
   <li>
     <time>{{ .Date.Format "2006/01/02" }}</time>

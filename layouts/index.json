@@ -12,7 +12,7 @@
     "url": "https://ronaldsvilcins.com/"
   },
   "items": [
-    {{ $list := (where .Site.RegularPages "Section" "writing") }}
+    {{ $list := ( .Pages ) }}
     {{ $len := (len $list) }}
 
     {{ range $index, $element := $list }}
